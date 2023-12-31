@@ -42,4 +42,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    
+    // Relación One To Many / de uno a muchos
+    public function images() {
+        
+        return $this->hasMany('App\Images');
+    }
 }
